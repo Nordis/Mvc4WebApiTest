@@ -15,11 +15,13 @@
                 "text json": $.parseJSON,
                 success: function (data) {
                     $.each(data, function () {
-                        $("#output").append("Name: " + this.FullName + "(" + this.UserId + ")<br/>");
+                        $("#output").append("Name: " + this.FullName + "&nbsp;&nbsp;(" + this.UserId + ")<br/>");
                     });
+                    $("#raw-json").html("<h3>Raw JSON from /api/values</h3>" + JSON.stringify(data));
                 }
             });
         });
     </script>
-    <div id="output"></div>
+    <div id="output" style="margin: 20px 0;"></div>
+    <div id="raw-json"></div>
 </div>
