@@ -1,0 +1,25 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Testing Web API";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="width:80%;margin:20px 10%;padding-bottom: 40px">
+    <h1>Testring Mvc4 Web API</h1>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                url: "/api/values",
+                dataType: "json",
+                "text json": $.parseJSON,
+                success: function (data) {
+                    $.each(data, function () {
+                        $("#output").append(this.FullName + "<br/>");
+                    });
+                }
+            });
+        });
+    </script>
+    <div id="output"></div>
+</div>
