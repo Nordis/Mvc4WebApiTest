@@ -30,6 +30,11 @@ namespace Mvc4WebApiTest
             );
 
             routes.MapRoute(
+                name: "WebApiTest",
+                url: "web-api",
+                defaults: new { Controller = "Home", Action = "WebApiTest" });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

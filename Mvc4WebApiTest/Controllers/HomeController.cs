@@ -12,5 +12,10 @@ namespace Mvc4WebApiTest.Controllers
         {
             return View();
         }
+
+        public ActionResult WebApiTest()
+        {
+            return View();
+        }
     }
 }
