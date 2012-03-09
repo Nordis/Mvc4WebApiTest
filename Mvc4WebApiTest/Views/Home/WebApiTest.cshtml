@@ -15,7 +15,7 @@
                 "text json": $.parseJSON,
                 success: function (data) {
                     $.each(data, function () {
-                        $("#output").append(this.FullName + "<br/>");
+                        $("#output").append("Name: " + this.FullName + "(" + this.UserId + ")<br/>");
                     });
                 }
             });

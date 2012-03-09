@@ -22,6 +22,12 @@ namespace Mvc4WebApiTest.Controllers
                                                 UserId = "User2",
                                                 FullName = "Some Dude",
                                                 Age = 34
+                                            },
+                                        new User
+                                            {
+                                                UserId = "User3",
+                                                FullName = "Donald Duck",
+                                                Age = -1
                                             }
                                       };
         // GET /api/values
